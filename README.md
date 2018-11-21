@@ -1,24 +1,20 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+#production のGemをインストールしない
+bundle install --with out production
 
-* Configuration
+#そのあとデータベースへのマイグレーションをする
+#マイグレーションとはSQLを書くことなくRubyでデータベース内にテーブルを作成することができる機能
 
-* Database creation
+rails db:migrate
 
-* Database initialization
+#テストをしてみる
 
-* How to run the test suite
+rails test
 
-* Services (job queues, cache servers, search engines, etc.)
+#テストができたら
 
-* Deployment instructions
+rails server
 
-* ...
