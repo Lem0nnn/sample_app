@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'sample_pages/home'
-  get 'sample_pages/help'
-  get 'sample_pages/about'
-  root 'application#hello'
+  get 'users/new'
+  root 'sample_pages#home'
+  get '/help',        to: 'sample_pages#help'
+  get '/about',       to: 'sample_pages#about'
+  get '/contact',     to: 'sample_pages#contact'
+  get '/home',        to: 'sample_pages#home'
+  get '/signup',      to: 'users#new' 
 end
